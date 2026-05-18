@@ -31,6 +31,19 @@
     </table>
   </div>
   
+  <h2>Daftar Peminjaman Buku</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Nama Peminjam</th>
+      <th>Judul Buku</th>
+      <th>Tanggal Pinjam</th>
+    </tr>
+  </thead>
+  <tbody id="tabelPeminjaman"></tbody>
+</table>
   
    <script type="module">
       import { logout,tampilkanDaftarBuku } from './main.js'
@@ -46,3 +59,20 @@
 </body>
 
 </html>
+<script type="module">
+  import {
+    logout,
+    tampilkanDaftarBuku,
+    tampilkanDaftarPeminjaman
+  } from './main.js'
+
+  const logoutLink = document.getElementById('logout')
+
+  logoutLink.addEventListener('click', (e) => {
+    e.preventDefault()
+    logout()
+  })
+
+  tampilkanDaftarBuku()
+  tampilkanDaftarPeminjaman()
+</script>
