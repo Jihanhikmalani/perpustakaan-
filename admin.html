@@ -6,23 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Admin Perpustakaan</title>
   
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+   <h1>Admin Perpustakaan</h1>
+   
+   <button href="#" class="button" id="logout">Keluar</button>
   
-  <h1>Admin Perpustakaan</h1>
+        <div class="container">
+    
+    <a href="tambah.html" class="button"> Tambah Buku</a>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Judul Buku</th>
+          <th>Penulis</th>
+          <th>Penerbit</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="tabelData"></tbody>
+    </table>
+  </div>
   
-  <button href="#" class="btn" id="logout">keluar</button>
-
-  <script type="module">
-      import { logout } from './main.js'
+  
+   <script type="module">
+      import { logout,tampilkanDaftarBuku } from './main.js'
 
       const logoutLink = document.getElementById('logout')
       logoutLink.addEventListener('click', (e) => {
         e.preventDefault()
         logout()
       })
+      
+      tampilkanDaftarBuku()
     </script>
 </body>
 

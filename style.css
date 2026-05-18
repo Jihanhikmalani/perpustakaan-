@@ -1,138 +1,123 @@
-/* Import Google Fonts - Menggunakan Playfair Display untuk kesan klasik */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lora:ital@0,400;0,700;1,400&display=swap');
-
-:root {
-    --primary-wood: #5D4037;
-    --paper-white: #FDFBF7;
-    --vintage-beige: #F5F5DC;
-    --library-green: #2E7D32;
-    --ink-black: #2C2C2C;
-    --gold-accent: #C5A059;
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
 }
 
+/* Background utama */
 body {
-    background-color: var(--vintage-beige);
-    color: var(--ink-black);
-    font-family: 'Lora', serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  background-color: #f4ecd8; /* krem klasik */
+  color: #3b2f2f;
 }
 
-/* Header & Judul */
+/* Header */
 header {
-    background-color: var(--primary-wood);
-    color: var(--gold-accent);
-    padding: 2rem 0;
-    text-align: center;
-    border-bottom: 5px double var(--gold-accent);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background-color: #5a3e2b; /* cokelat tua */
+  color: #f8f1e4;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 2px;
+  border-bottom: 4px solid #c9a66b; /* aksen emas */
 }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-}
-
-.logo-insan {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* Navigasi */
+/* Navbar */
 nav {
-    background: #4E342E;
-    padding: 10px;
-    text-align: center;
+  background-color: #7b5e3b;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav a {
-    color: var(--paper-white);
-    text-decoration: none;
-    margin: 0 15px;
-    font-variant: small-caps;
-    font-weight: bold;
-    transition: 0.3s;
+  color: #f8f1e4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 nav a:hover {
-    color: var(--gold-accent);
-    border-bottom: 1px solid var(--gold-accent);
+  color: #ffd700; /* emas */
 }
 
-/* Kontainer Utama */
+/* Container */
 .container {
-    max-width: 1000px;
-    margin: 30px auto;
-    background: var(--paper-white);
-    padding: 40px;
-    border: 1px solid #D7D7BC;
-    box-shadow: 5px 5px 0px #D7D7BC; /* Shadow kaku ala vintage */
+  padding: 20px;
 }
 
-/* Tabel Koleksi Buku */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+/* Card / Box */
+.card {
+  background-color: #fffaf0;
+  border: 1px solid #d6c3a3;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
 }
 
-th {
-    background-color: var(--primary-wood);
-    color: white;
-    padding: 12px;
-    text-align: left;
-    font-variant: small-caps;
+/* Judul */
+h1, h2, h3 {
+  color: #5a3e2b;
+  margin-bottom: 10px;
 }
 
-td {
-    padding: 12px;
-    border-bottom: 1px solid #E0E0E0;
-}
-
-tr:nth-child(even) {
-    background-color: #F9F7F2;
-}
-
-/* Tombol / Button */
-.btn {
-    background-color: var(--library-green);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-family: 'Lora', serif;
-    font-weight: bold;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #1B5E20;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-}
-
-/* Input Form */
+/* Form */
 input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #C4C4A4;
-    background-color: #FFF;
-    font-family: 'Lora', serif;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #c9a66b;
+  border-radius: 6px;
+  background-color: #fff;
+  box-sizing: border-box;
 }
 
-input:focus {
-    outline: 2px solid var(--gold-accent);
+/* Tombol */
+button {
+  background-color: #5a3e2b;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #7b5e3b;
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th {
+  background-color: #5a3e2b;
+  color: white;
+  padding: 10px;
+}
+
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f3e7;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 40px 0;
-    font-style: italic;
-    font-size: 0.9rem;
-    color: #777;
+  text-align: center;
+  padding: 15px;
+  background-color: #5a3e2b;
+  color: #f8f1e4;
+  margin-top: 20px;
+  font-size: 14px;
 }
